@@ -1,0 +1,4 @@
+test:
+  override:
+    - echo "<img src='world.svg'>" > $CIRCLE_ARTIFACTS/hello.html
+    - curl "http://upload.wikimedia.org/wikipedia/commons/e/e2/Ambox_globe.svg" > $CIRCLE_ARTIFACTS/world.svg
