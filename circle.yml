@@ -1,4 +1,5 @@
 test:
   override:
-    - echo "<p>Hello, <img width=80 src='world.svg'></p>" > $CIRCLE_ARTIFACTS/hello.html
-    - curl "http://upload.wikimedia.org/wikipedia/commons/e/e2/Ambox_globe.svg" > $CIRCLE_ARTIFACTS/world.svg
+    - echo "<p>Hello, <img width=80 src='img/world.svg'></p>" > $CIRCLE_ARTIFACTS/hello.html
+    - mkdir $CIRCLE_ARTIFACTS/img
+    - curl "http://upload.wikimedia.org/wikipedia/commons/e/e2/Ambox_globe.svg" > $CIRCLE_ARTIFACTS/img/world.svg
