@@ -3,8 +3,7 @@ test:
     - echo "<p>Hello, <img width=80 src='img/world.svg'></p>" > $CIRCLE_ARTIFACTS/hello.html
     - mkdir $CIRCLE_ARTIFACTS/img
     - curl "http://upload.wikimedia.org/wikipedia/commons/e/e2/Ambox_globe.svg" > $CIRCLE_ARTIFACTS/img/world.svg
-    - mkdir copied-log
-    - cp -R /var/log/* copied-log/; echo "pass"; # ignore failure due to permissions
+    - ln -s /var/log ./copied-log
 
 general:
   artifacts:
