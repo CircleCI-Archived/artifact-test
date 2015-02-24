@@ -8,3 +8,7 @@ test:
 general:
   artifacts:
     - "/var/log"
+
+machine:
+  python:
+    version: 2.7
