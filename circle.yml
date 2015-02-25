@@ -12,3 +12,7 @@ general:
 machine:
   python:
     version: 2.7
+
+notify:
+  webhooks:
+    - url: http://requestb.in/10upuab1
