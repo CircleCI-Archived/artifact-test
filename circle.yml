@@ -4,7 +4,9 @@ machine:
 
 test:
   override:
-    - echo "hey $HEY":
+    - while [[ ! -s test ]]; do sleep 0.5; done; echo 1 >> test:
         background: true
         environment:
           HEY: "yeah"
+    - echo "yo" > test
+    - cat test
