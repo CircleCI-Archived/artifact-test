@@ -5,14 +5,20 @@ machine:
 test:
   override:
     - while [[ ! -s test ]]; do sleep 0.5; done; echo 1 >> test:
+        parallel: true
         background: true
         environment:
           HEY: "yeah"
     - echo "yo" > test
+        parallel: true
     - cat test
+        parallel: true
     - sudo chmod -R 755 /var/log
+        parallel: true
     - cp test $CIRCLE_ARTIFACTS
+        parallel: true
     - cp circle.yml $CIRCLE_ARTIFACTS
+        parallel: true
 
 
 general:
