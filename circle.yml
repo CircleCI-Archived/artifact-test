@@ -19,6 +19,8 @@ test:
         parallel: true
     - cp circle.yml $CIRCLE_ARTIFACTS:
         parallel: true
+    - cp circle.yml $CIRCLE_TEST_REPORTS:
+        parallel: true
 
 
 general:
