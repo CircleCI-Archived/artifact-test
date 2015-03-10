@@ -9,15 +9,15 @@ test:
         background: true
         environment:
           HEY: "yeah"
-    - echo "yo" > test
+    - echo "yo" > test:
         parallel: true
-    - cat test
+    - cat test:
         parallel: true
-    - sudo chmod -R 755 /var/log
+    - sudo chmod -R 755 /var/log:
         parallel: true
-    - cp test $CIRCLE_ARTIFACTS
+    - cp test $CIRCLE_ARTIFACTS:
         parallel: true
-    - cp circle.yml $CIRCLE_ARTIFACTS
+    - cp circle.yml $CIRCLE_ARTIFACTS:
         parallel: true
 
 
