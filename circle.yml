@@ -11,8 +11,8 @@ test:
     - echo "yo" > test
     - cat test
     - sudo chmod -R 755 /var/log
-    - mv test $CIRCLE_ARTIFACTS
-    - mv circle.yml $CIRCLE_ARTIFACTS
+    - cp test $CIRCLE_ARTIFACTS
+    - cp circle.yml $CIRCLE_ARTIFACTS
 
 
 general:
