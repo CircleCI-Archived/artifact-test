@@ -1,6 +1,8 @@
 machine:
   python:
     version: 2.7
+  environment:
+    TEST:
 
 test:
   override:
