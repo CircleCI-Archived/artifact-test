@@ -27,3 +27,5 @@ general:
   artifacts:
     - "test"
     - /var/log
+
+
