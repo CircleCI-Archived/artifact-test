@@ -13,15 +13,6 @@ test:
         parallel: true
     - cat test:
         parallel: true
-    - sudo chmod -R 755 /var/log:
-        parallel: true
-    - cp test $CIRCLE_ARTIFACTS:
-        parallel: true
-    - cp circle.yml $CIRCLE_ARTIFACTS:
-        parallel: true
-    - cp circle.yml $CIRCLE_TEST_REPORTS:
-        parallel: true
-
 
 general:
   artifacts:
