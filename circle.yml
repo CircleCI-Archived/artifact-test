@@ -19,4 +19,9 @@ general:
     - "test"
     - /var/log
 
+deployment:
+  release:
+    tag: /v[0-9]+(\.[0-9]+)*/
+    commands:
+      - ./deploy_master.sh
 
