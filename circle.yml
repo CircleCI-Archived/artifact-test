@@ -1,5 +1,27 @@
+machine:
+  python:
+    version: 2.7
+
 test:
   override:
-    - echo "<p>Hello, <img width=80 src='img/world.svg'></p>" > $CIRCLE_ARTIFACTS/hello.html
-    - mkdir $CIRCLE_ARTIFACTS/img
-    - curl "http://upload.wikimedia.org/wikipedia/commons/e/e2/Ambox_globe.svg" > $CIRCLE_ARTIFACTS/img/world.svg
+    - while [[ ! -s test ]]; do sleep 0.5; done; echo 1 >> test:
+        parallel: true
+        background: true
+        environment:
+          HEY: "yeah"
+    - echo "yo" > test:
+        parallel: true
+    - cat test:
+        parallel: true
+
+general:
+  artifacts:
+    - "test"
+    - /var/log
+
+deployment:
+  release:
+    tag: /v[0-9]+(\.[0-9]+)*/
+    commands:
+      - ./deploy_master.sh
+
